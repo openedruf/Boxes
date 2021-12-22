@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>boxes cards</title>
+    <style media="screen">
+          .flex-container {
+              display: flex;
+              /*width: 750px;*/ /* 1. Убираем фиксированную ширину родителю */
+              margin: 0 auto;
+              height: 300px;
+              color: #fff;
+              font-size: 2.4em;
+              flex-flow: column wrap;
+              position: relative;
+          }
+
+          .flex-item {
+              border-radius: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              /*padding: 10px;*/
+          }
+
+          .two {
+              flex: 1 1 0;
+          }
+
+          .three {
+              margin-top: 10px;
+              flex: 1 1 0;
+          }
+
+          .one {
+              margin-left: 10px;
+              flex-basis: 100%;
+          }
+
+          .ones {
+            margin-right: 10px;
+            flex-basis: 100%;
+          }
+
+          .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            perspective: 1000px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .front, .back {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.8s;
+            border-radius: 50px;
+            -webkit-perspective: 0;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translate3d(0,0,0);
+            visibility:visible;
+            backface-visibility: hidden;
+          }
+
+          .back {
+            transform: rotateY(180deg);
+          }
+
+          .card:hover .front {
+            transform: rotateY(180deg);}
+          .card:hover .back {
+            transform: rotateY(360deg);}
+
+    </style>
+  </head>
+  <body>
+    <div class="flex-container" style="height: 100px; ">
+      <div class="flex-item two" style="border-radius: 10px; position: relative; background: #a574a0;">
+          <div class="flex-item two" style="border-radius: 10px; background: #a574a0; position: absolute; top:0; width: 100%;">
+            boxes cards.
+          </div>
+
+      <div class="flex-item two" style="border-radius: 10px; background: #a574a0; position: absolute; bottom: 10px; width:100%;">
+          <div class="flex-item one" style="background: #ae83eb; height: 40px; ">
+            <a href="boxes_cards.html">boxes cards</a>
+          </div>
+          <div class="flex-item one" style="background: #ae83eb; height: 40px;">
+            <a href="boxes_flash.html">boxes flash</a>
+          </div>
+          <div class="flex-item one" style="background: #ae83eb; height: 40px; ">
+            <a href="boxes_bars.html">boxes bars</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+    <div class="flex-container">
+        <div class="flex-item two">
+          <div class="card">
+            <div class="front" style="background: #a76cca">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </div>
+            <div class="back" style="background: #8f64a9">
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-item three">
+          <div class="card">
+            <div class="front" style="background: #BB844C;">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            </div>
+            <div class="back" style="background: #bb650c;">
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-item one">
+          <div class="card">
+            <div class="front" style="background: #508694;">
+              Duis aute irure dolor in reprehenderit in voluptate
+            </div>
+            <div class="back" style="background: #5eaec3;">
+              velit esse cillum dolore eu fugiat nulla pariatur.
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <p></p>
+
+    <div class="flex-container">
+
+        <div class="flex-item ones">
+          <div class="card">
+            <div class="front" style="background: #508694;">
+              Some block
+            </div>
+            <div class="back" style="background: #79b4c3;">
+              Duis aute irure dolor in reprehenderit.
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-item ones">
+          <div class="card">
+            <div class="front" style="background: #3e4b90;">
+              Some block.
+            </div>
+            <div class="back" style="background: #727fc5;">
+              Mollit anim id est laborum..
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex-item three">
+          <div class="card">
+            <div class="front" style="background: #929D79;">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="back" style="background: #4d5636;">
+              sed do eiusmod tempor incididunt.
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-item three">
+          <div class="card">
+            <div class="front" style="background: #BB844C;">
+              some block
+            </div>
+            <div class="back" style="background: #bb650c;">
+              lorem ipsum
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-item three">
+          <div class="card">
+            <div class="front" style="background: #a76cca">
+              some block
+            </div>
+            <div class="back" style="background: #8f64a9">
+              lorem ipsum
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+  </body>
+</html>
